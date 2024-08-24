@@ -20,3 +20,16 @@ footer {
 #faq {
     background-color: lightgray;
 }
+
+.posts-list {
+    width: 66%;
+    display: inline-block;
+}
+.category-list {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    background-color:antiquewhite;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
