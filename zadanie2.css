@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.header {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    padding: 10px 20px;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.text {
+    color:blue;
+    padding: 10px;
+}
+
+#introText {
+    background-color: blue;
+    color: white;
+}
