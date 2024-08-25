@@ -3,6 +3,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     background-color: lightgray;
     padding: 10px 15px 10px 15px;
@@ -37,4 +41,13 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.nav-link {
+    color: black;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color:gray;
 }
