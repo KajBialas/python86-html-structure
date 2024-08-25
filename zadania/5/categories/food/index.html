@@ -1,0 +1,113 @@
+<!-- Zadanie 3
+- wykorzystaj kod z zadania 2
+- dodaj obok listy postów panel boczny
+
+* utworz sekcje z lista najczestych pytań, niech wyświetlają się one w 3 kolumnach (33%) -->
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width, initial-scal=1.0">
+        <title>Blog SDA</title>
+        <link rel="stylesheet" href="../../style.css">
+
+    </head>
+    <body>
+        <header class="header">
+            <a href="/zadania/5">
+                <h1>
+                    Blog
+                </h1>
+            </a>
+            <nav>
+                <a href="/zadania/5/about-us/">
+                    O nas
+                </a>
+                <a href="/zadania/5/contact/">
+                    Kontakt
+                </a>
+            </nav>
+
+        </header>
+        <div class="section">
+            <section class="articles">
+                <h1>Kategoria jedzenie:</h1>
+                <article>
+                    <h2>Post 1</h2>
+                    <p id="introText" class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                </article>
+                <article>
+                    <h2>Post 2</h2>
+                    <p id="introText" class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                </article>
+                
+            </section><div class="sidebar">
+                <h2>Kategorie</h2>
+                <ul>
+                    <li>
+                        <a href="/zadania/5/categories/food/">Kategoria jedzenie</a>
+                    </li>
+                    <li>
+                        Kategoria 2
+                    </li>
+                    <li>
+                        Kategoria 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="faq section">
+            <h1>Najczesciej zadawane pytania:</h1>
+            <div>
+                <artcile class="faq-element">
+                    <h2 class="faq-title">
+                        Pytanie 1
+                    </h2>
+                    <p class="faq-content hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                </artcile>
+                <artcile class="faq-element">
+                    <h2 class="faq-title">
+                        Pytanie 2
+                    </h2>
+                    <p class="faq-content hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                </artcile>
+                <artcile class="faq-element">
+                    <h2 class="faq-title">
+                        Pytanie 3
+                    </h2>
+                    <p class="faq-content hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit suscipit augue non posuere. Vivamus leo nulla, rutrum a malesuada quis, scelerisque vitae sapien. Cras ornare volutpat libero. Ut metus dolor, vestibulum in diam quis, mattis rhoncus risus. Curabitur imperdiet suscipit est, nec suscipit lacus mollis non. Suspendisse dictum lorem a massa malesuada, sed tempus ante placerat. Ut congue sapien in nibh lacinia, a scelerisque lorem auctor. Etiam vehicula diam eu malesuada condimentum.
+                    </p>
+                </artcile>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>
+                Blog wykonany podczas Zadania 1
+            </p>
+        </footer>
+        <script src="../../script.js" />
+    </body>
+</html>
