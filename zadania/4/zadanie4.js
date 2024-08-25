@@ -12,3 +12,4 @@ faqTitles.forEach( title => {
         }
     });
 });
+
