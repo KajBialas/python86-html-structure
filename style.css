@@ -26,17 +26,25 @@ footer {
     background-color: lightgray;
 }
 
+#post-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 .posts-list {
-    width: 66%;
-    display: inline-block;
+    flex: 5;
 }
 .category-list {
-    width: 33%;
-    display: inline-block;
-    vertical-align: top;
     background-color:antiquewhite;
     padding-left: 10px;
     box-sizing: border-box;
+    flex: 1;
+}
+
+.category-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .hidden {
