@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog SDA</title>
+    <!-- Importowanie Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Importowanie czcionek Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">TodoList</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="todo.html">List</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="section">
+            <h4>Twoja lista zadań:</h4>
+            <div class="row">
+                <form id="todo-form" class="col s12">
+                    <div class="input-field">
+                        <input id="task-input" type="text" class="validate" required>
+                        <label for="task-input">Dodaj zadanie</label>
+                    </div>
+                    <button type="submit" class="waves-effect waves-light btn">Dodaj</button>
+                </form>
+            </div>
+            <ul id="task-list" class="collection">
+
+            </ul>
+        </div>
+    </div>
+        
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
