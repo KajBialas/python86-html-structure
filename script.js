@@ -1,13 +1,13 @@
 const loadMoreButton = document.getElementById('loadMoreButton');
 // const loadMoreButton = document.querySelector('#loadMoreButton');
-const hiddenPosts = document.querySelectorAll('.post.hidden');
+const hiddenPosts = document.querySelectorAll('.post.hide');
 
 let currentIndex = 0;
 
 loadMoreButton.addEventListener('click', () => {
     for (let i = 0; i < 2; i++) {
         if (currentIndex < hiddenPosts.length)  {
-            hiddenPosts[currentIndex].classList.remove('hidden');
+            hiddenPosts[currentIndex].classList.remove('hide');
             currentIndex++;
         } else {
             loadMoreButton.style.display = 'none';
@@ -26,17 +26,21 @@ postForm.addEventListener('submit', function(event) {
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
 
+    console.log(author, title, content);
     const post = `
-                    <h2>
-                        ${title}
-                    </h2>
-                    <p>
-                        ${content}
-                    </p>
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">${title}</span>
+                            <p>${content}</p>
+                        </div>
+                    </div>
     `;
 
-    const newPost = document.createElement('article');
-    newPost.classList.add('post');
+    const newPost = document.createElement('div');
+    newPost.classList.add('col');
+    newPost.classList.add('s12');
+    newPost.classList.add('m6');
+
     newPost.innerHTML = post;
 
     postsContainer.appendChild(newPost);
