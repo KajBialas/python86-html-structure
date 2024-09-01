@@ -3,6 +3,7 @@ const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
 const editTaskInput = document.getElementById('edit-task-input');
 const saveTaskBtn = document.getElementById('save-task-btn');
+const deleteTaskBtn = document.getElementById('delete-task-btn');
 
 let currentTaskElement = null;
 
@@ -25,7 +26,7 @@ taskForm.addEventListener('submit', function(e) {
         const deleteLink = document.createElement('a');
         deleteLink.className = 'secondary-content';
         deleteLink.innerHTML = '<i class="material-icons">delete</i>';
-        deleteLink.addEventListener('click', removeTask);
+        deleteLink.addEventListener('click', openDeleteModal);
 
         li.appendChild(deleteLink);
         li.appendChild(editLink);
@@ -36,11 +37,10 @@ taskForm.addEventListener('submit', function(e) {
     }
 });
 
-function removeTask(e) {
-    if (confirm('Napewno?')) {
-        const li  = e.target.parentElement.parentElement;
-        taskList.removeChild(li);
-    }
+function openDeleteModal(e) {
+    currentTaskElement = e.target.parentElement.parentElement;
+    const modal = M.Modal.getInstance(document.getElementById('delete-modal'));
+    modal.open();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -60,9 +60,11 @@ saveTaskBtn.addEventListener('click', function() {
     if (currentTaskElement) {
         currentTaskElement.firstChild.textContent = editTaskInput.value;
     }
-})
+});
 
-
-
-// dozwolone
-
+deleteTaskBtn.addEventListener('click', function(){
+    if (currentTaskElement) {
+        taskList.removeChild(currentTaskElement);
+        // currentTaskElement = null;
+    }
+});
