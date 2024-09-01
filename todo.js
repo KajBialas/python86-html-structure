@@ -1,6 +1,10 @@
 const taskForm = document.getElementById('todo-form');
 const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
+const editTaskInput = document.getElementById('edit-task-input');
+const saveTaskBtn = document.getElementById('save-task-btn');
+
+let currentTaskElement = null;
 
 taskForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -13,11 +17,18 @@ taskForm.addEventListener('submit', function(e) {
 
         li.appendChild(document.createTextNode(task));
 
+        const editLink = document.createElement('a');
+        editLink.className = 'secondary-content';
+        editLink.innerHTML = '<i class="material-icons">edit</i>';
+        editLink.addEventListener('click', openEditModal);
+
         const deleteLink = document.createElement('a');
         deleteLink.className = 'secondary-content';
-        deleteLink.innerHTML = '<i class="material-icon">delete</i>';
+        deleteLink.innerHTML = '<i class="material-icons">delete</i>';
         deleteLink.addEventListener('click', removeTask);
+
         li.appendChild(deleteLink);
+        li.appendChild(editLink);
 
         taskList.appendChild(li);
 
@@ -31,3 +42,27 @@ function removeTask(e) {
         taskList.removeChild(li);
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, {});
+  });
+
+function openEditModal(e) {
+    currentTaskElement = e.target.parentElement.parentElement;
+    editTaskInput.value = currentTaskElement.firstChild.textContent;
+    const modal = M.Modal.getInstance(document.getElementById('edit-modal'));
+    modal.open();
+    M.updateTextFields();
+}
+
+saveTaskBtn.addEventListener('click', function() {
+    if (currentTaskElement) {
+        currentTaskElement.firstChild.textContent = editTaskInput.value;
+    }
+})
+
+
+
+// dozwolone
+

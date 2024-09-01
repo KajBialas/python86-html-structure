@@ -6,6 +6,7 @@
     <title>Blog SDA</title>
     <!-- Importowanie Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Importowanie czcionek Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="style.css"> -->
@@ -39,9 +40,29 @@
         </div>
     </div>
         
-      
+    
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <h4>Edytuj zadanie</h4>
+          <div class="input-field">
+            <input id="edit-task-input" type="text" class="validate">
+            <label for="edit-task-input">Zadanie</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Anuluj</a>
+          <a href="#!" id="save-task-btn" class="modal-close waves-effect waves-light btn">Zapisz</a>
+        </div>
+    </div> 
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="todo.js"></script>
 </body>
 </html>
+
+
+// Zadanie 2
+// Utwórz modal potwierdzający usunięcie zadania
+// Zmodyfikuj logikę usuwania
