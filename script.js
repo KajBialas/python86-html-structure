@@ -19,21 +19,14 @@ loadMoreButton.addEventListener('click', () => {
 const postForm = document.getElementById('postForm');
 const postsContainer = document.querySelector('.posts-list');
 
-postForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const author = document.getElementById('author').value;
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
-
-    console.log(author, title, content);
+const createPostElement = (title, content) => {
     const post = `
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title">${title}</span>
-                            <p>${content}</p>
-                        </div>
-                    </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">${title}</span>
+                <p>${content}</p>
+            </div>
+        </div>
     `;
 
     const newPost = document.createElement('div');
@@ -44,6 +37,44 @@ postForm.addEventListener('submit', function(event) {
     newPost.innerHTML = post;
 
     postsContainer.appendChild(newPost);
+};
+
+postForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const author = document.getElementById('author').value;
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+
+    createPostElement(title, content);
 
     postForm.reset();
 });
+
+
+
+// Pobieranie danych z zewnętrznego API
+
+const API = 'https://jsonplaceholder.typicode.com/posts';
+
+
+
+const fetchDataFromAPI = async () => {
+    try {
+        const response = await fetch(API);
+        if (!response.ok) {
+            throw new Error('Status nie jest ok!')
+        }
+
+        const posts = await response.json();
+        posts.map(post => {
+            return createPostElement(post.title, post.body);
+        })
+
+    } catch (error) {
+        console.log('Wyjątek!', error)
+    }
+    
+}
+
+fetchDataFromAPI();
